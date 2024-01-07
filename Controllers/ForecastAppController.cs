@@ -8,10 +8,10 @@ namespace ForecastApp.Controllers
     public class ForecastAppController : Controller
     {
         // GET: ForecastApp/SearchCity
-        public IActionResult Index()
+        public IActionResult SearchCity()
         {
-            var viewModel = new SearchCity();
-            return View(viewModel);
+         
+            return View();
         }
         private readonly IForecastRepository _forecastRepository;
         public ForecastAppController(IForecastRepository forecastAppRepo)
@@ -37,12 +37,12 @@ namespace ForecastApp.Controllers
         }
         // POST: ForecastApp/SearchCity
         [HttpPost]
-        public IActionResult Index(SearchCity model)
+        public IActionResult SearchCity(SearchCity model)
         {
             // If the model is valid, consume the Weather API to bring the data of the city
             if (ModelState.IsValid)
             {
-                return RedirectToAction("City", new { city = model.CityName });
+                return RedirectToAction("City","ForecastApp", new { city = model.CityName });
             }
             return View(model);
         }
