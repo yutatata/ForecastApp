@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.8.34330.188
+VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastApp", "ForecastApp\ForecastApp.csproj", "{80A2391B-5A67-456F-A2E3-75D4FBB8AC59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForecastApp", "ForecastApp.csproj", "{12EDE295-01C7-4178-AEC4-D985207363D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80A2391B-5A67-456F-A2E3-75D4FBB8AC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80A2391B-5A67-456F-A2E3-75D4FBB8AC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80A2391B-5A67-456F-A2E3-75D4FBB8AC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80A2391B-5A67-456F-A2E3-75D4FBB8AC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12EDE295-01C7-4178-AEC4-D985207363D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EDE295-01C7-4178-AEC4-D985207363D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EDE295-01C7-4178-AEC4-D985207363D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EDE295-01C7-4178-AEC4-D985207363D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {27E8D4B5-E411-45D9-92AA-8B41CC38A53A}
+		SolutionGuid = {486B0032-10D5-405C-ABA0-DEAEBC72F1AE}
 	EndGlobalSection
 EndGlobal
