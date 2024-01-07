@@ -8,7 +8,7 @@ namespace ForecastApp.Controllers
     public class ForecastAppController : Controller
     {
         // GET: ForecastApp/SearchCity
-        public IActionResult SearchCity()
+        public IActionResult Index()
         {
             var viewModel = new SearchCity();
             return View(viewModel);
@@ -37,7 +37,7 @@ namespace ForecastApp.Controllers
         }
         // POST: ForecastApp/SearchCity
         [HttpPost]
-        public IActionResult SearchCity(SearchCity model)
+        public IActionResult Index(SearchCity model)
         {
             // If the model is valid, consume the Weather API to bring the data of the city
             if (ModelState.IsValid)
@@ -47,10 +47,6 @@ namespace ForecastApp.Controllers
             return View(model);
         }
        
-        public IActionResult Indexed1()
-        {
-            return View();
-        }   
-
+    
     }
 }
