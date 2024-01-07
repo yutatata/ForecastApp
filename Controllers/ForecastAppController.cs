@@ -42,7 +42,7 @@ namespace ForecastApp.Controllers
             // If the model is valid, consume the Weather API to bring the data of the city
             if (ModelState.IsValid)
             {
-                return RedirectToAction("City", "ForecastApp", new { city = model.CityName });
+                return RedirectToAction("City", new { city = model.CityName });
             }
             return View(model);
         }
