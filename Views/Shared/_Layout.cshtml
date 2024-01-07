@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,16 +8,25 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only"
+            asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
+
 <body>
     <nav>
         <div class="wrapper">
@@ -26,69 +36,24 @@
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li>
-                    <a href="#" class="desktop-item">Dropdown Menu</a>
-                    <input type="checkbox" id="showDrop">
-                    <label for="showDrop" class="mobile-item">Dropdown Menu</label>
-                    <ul class="drop-menu">
-                        <li><a href="#">Drop menu 1</a></li>
-                        <li><a href="#">Drop menu 2</a></li>
-                        <li><a href="#">Drop menu 3</a></li>
-                        <li><a href="#">Drop menu 4</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="desktop-item">Mega Menu</a>
-                    <input type="checkbox" id="showMega">
-                    <label for="showMega" class="mobile-item">Mega Menu</label>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="row">
-                                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
-                            </div>
-                            <div class="row">
-                                <header>Design Services</header>
-                                <ul class="mega-links">
-                                    <li><a href="#">Graphics</a></li>
-                                    <li><a href="#">Vectors</a></li>
-                                    <li><a href="#">Business cards</a></li>
-                                    <li><a href="#">Custom logo</a></li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <header>Email Services</header>
-                                <ul class="mega-links">
-                                    <li><a href="#">Personal Email</a></li>
-                                    <li><a href="#">Business Email</a></li>
-                                    <li><a href="#">Mobile Email</a></li>
-                                    <li><a href="#">Web Marketing</a></li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <header>Security services</header>
-                                <ul class="mega-links">
-                                    <li><a href="#">Site Seal</a></li>
-                                    <li><a href="#">VPS Hosting</a></li>
-                                    <li><a href="#">Privacy Seal</a></li>
-                                    <li><a href="#">Website design</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                <li><a href="#">Weather</a></li>
+                <<li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
                 <li><a href="#">Feedback</a></li>
             </ul>
             <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
         </div>
     </nav>
- 
+
+
+
+
 
     @* <partial name="_CookieConsentPartial" /> *@
 
     <div class="container body-content">
         @RenderBody()
- 
+
     </div>
 
     <environment include="Development">
@@ -98,20 +63,42 @@
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
         <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
+    <footer>
+        <div class="footer">
+
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                Weather and News - All rights reserved || Designed By: Computer Engineering Students
+            </div>
+        </div>
+    </footer>
+
 </body>
+
+
 </html>
