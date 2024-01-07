@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model List<ForecastApp.DisastersAPIModel.DisasterEvent>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,39 +13,62 @@
 <body>
     <section class="wrapper2">
         <div class="container">
+
             <div class="row">
                 <div class="col text-center mb-5">
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card text-dark card-has-bg click-col"
-                        style="background-image:url('https://i.pinimg.com/originals/65/58/e6/6558e658ce0e021f9c94a1dc03c22f3a.jpg');">
-        
-                        <div class="card-img-overlay d-flex flex-column">
-                            <div class="card-body">
-                                <h4 class="card-title mt-0"><a class="text-dark" href="https://creativemanner.com">
-                                        Looks like it's going to be cloudy today!</a></h4>
-                                <small><i class="far fa-clock"></i> October 15, 2020</small>
+
+                @foreach (var item in Model.Take(6))
+                {
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-dark card-has-bg click-col"
+                             style="background-image:url('https://i.pinimg.com/originals/65/58/e6/6558e658ce0e021f9c94a1dc03c22f3a.jpg');">
+
+                            <div class="card-img-overlay d-flex flex-column">
+                                <div class="card-body">
+                                    <h4 class="card-title mt-0">
+                                           @if (item.Title == null || item.Description ==  String.Empty)
+                                            {
+                                              continue;
+                                            }
+                                        @item.Title
+                                    </h4>
+                                    <h6 class="mt-0">
+                                        @if (item.Description == null || item.Description == String.Empty)
+                                        {
+                                            continue;
+                                        }
+                                        @item.Description
+                                    </h6>
+                                 
+
+                                    <div class="card-footer  text-right">
+                                        @* Ayça bu kısmı kaartın alt sağ köesine sencede uygunsa alırmısın tarih Bİlgisi var *@
+                                            @item.Start
+                                   
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card text-dark card-has-bg click-col"
-                        style="background-image:url('https://i.pinimg.com/originals/65/58/e6/6558e658ce0e021f9c94a1dc03c22f3a.jpg');">
-        
-                        <div class="card-img-overlay d-flex flex-column">
-                            <div class="card-body">
-                                <h4 class="card-title mt-0"><a class="text-dark" href="https://creativemanner.com">
-                                        Looks like it's going to be cloudy today!</a></h4>
-                                <small><i class="far fa-clock"></i> October 15, 2020</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                }
+
+                   
+              
+             
+
+
+
             </div>
+
         </div>
+
+
     </section>
 </body>
 
